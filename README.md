@@ -1,25 +1,29 @@
 # Prajjwal Gupta — Earthbound / Orbital Systems
 
-Responsive single-page portfolio with a custom canvas-drawn, draggable globe and satellite / mission-control visual direction.
+A responsive SDE portfolio with a draggable, canvas-drawn Earth and a satellite / mission-control visual theme.
 
 ## Run locally
-Open `index.html` in a modern browser. Google Fonts load online; the globe is drawn locally with Canvas and requires no 3D library or API key.
+Open `index.html` in a modern browser. The globe is drawn with Canvas and needs no 3D library or API key. Google Fonts load online.
 
-## Deploy to Vercel
-1. Import https://github.com/Praj044/Portfolio into Vercel.
-2. Choose the **Other** framework preset.
-3. Leave the build command blank and set the output directory to `.`.
-4. Deploy, then test the generated URL on desktop and mobile.
+## Deploy with Vercel
+1. Import this repository: https://github.com/Praj044/Portfolio
+2. Framework preset: **Other**
+3. Build command: leave blank
+4. Output directory: `.`
+5. Install command: leave blank
+6. Deploy the project.
 
-## Verified profile links
+## Profile
 - GitHub: https://github.com/Praj044
 - LinkedIn: https://www.linkedin.com/in/prajjwal-gupta-20792b291
 - Email: p84610501@gmail.com
 
-## Project repositories
-- LSM-Storage-Engine: https://github.com/Praj044/LSM-Storage-Engine
-- AI-Cybershield: https://github.com/Praj044/AI-Cybershield
-- SEM defect project: https://github.com/Praj044/Sem_Defect
+## Featured work
+- LSM-Tree Key-Value Store: https://github.com/Praj044/LSM-Storage-Engine
+- AI CyberShield: https://github.com/Praj044/AI-Cybershield
+- Wall Calendar: https://github.com/Praj044/Calendar
+- SEM Defect Classification: https://github.com/Praj044/Sem_Defect
+- SEM live app: https://infersem.streamlit.app/
 
 ## Notes
-Cantilever.in is intentionally omitted from the experience timeline until role, dates and responsibilities are verified. Globe and telemetry labels are decorative, not live satellite data.
+Project metrics and experience descriptions are based on the portfolio owner's supplied SDE resume. The Earth globe and satellite-style telemetry are visual effects, not live satellite data.
