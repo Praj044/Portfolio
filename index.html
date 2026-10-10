@@ -31,6 +31,24 @@ section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-c
 .project:hover{box-shadow:0 8px 35px rgba(16,105,145,.08)}
 @media(max-width:560px){.hud-corner{font-size:.52rem}.hud-corner small{font-size:.46rem}.hud-tl,.hud-bl{left:1%}.hud-tr,.hud-br{right:1%}.target-ring{width:80%}}
 
+
+/* Cyber Globe: network mesh, scroll-driven exploration, immersive reveals */
+:root{--bg:#050b16;--panel:#08182a;--panel2:#0c2540;--text:#eef8ff;--muted:#9bb6ce;--green:#54d9ff;--lime:#a9ffef;--line:rgba(84,217,255,.17)}
+body{background-image:radial-gradient(ellipse at 78% 10%,rgba(0,112,210,.13),transparent 36%),radial-gradient(ellipse at 12% 48%,rgba(23,62,160,.09),transparent 32%)}
+.globe-stage{perspective:1000px}
+.globe-halo{background:radial-gradient(circle,rgba(0,175,255,.23),rgba(17,69,170,.09) 52%,transparent 73%);transition:transform .3s,opacity .3s}
+.globe-stage:before{background:linear-gradient(90deg,rgba(84,217,255,.055) 1px,transparent 1px),linear-gradient(rgba(84,217,255,.055) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at center,#000 20%,transparent 77%);border-color:rgba(84,217,255,.2)}
+.globe-stage:after{background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(84,217,255,.025) 5px 6px);opacity:.7}
+.target-ring{border-color:rgba(84,217,255,.22);box-shadow:0 0 40px rgba(0,158,255,.08),inset 0 0 40px rgba(0,158,255,.04)}
+.project,.timeline-item,.panel,.skill-card{backdrop-filter:blur(12px)}
+.project{position:relative;overflow:hidden}
+.project:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(125deg,rgba(84,217,255,.035),transparent 38%,rgba(53,84,255,.025))}
+.project:hover{box-shadow:0 12px 48px rgba(0,145,255,.13);border-color:rgba(84,217,255,.6)}
+.project h3{position:relative}
+.kicker{letter-spacing:.15em}
+.globe-hint{color:#68a6cc}
+@media(prefers-reduced-motion:no-preference){.project,.timeline-item,.skill-card,.panel{animation:cyberRise .75s both;animation-timing-function:cubic-bezier(.2,.7,.2,1)}.project:nth-child(2),.skill-card:nth-child(2){animation-delay:.08s}.project:nth-child(3),.skill-card:nth-child(3){animation-delay:.14s}.project:nth-child(4),.skill-card:nth-child(4){animation-delay:.2s}@keyframes cyberRise{from{opacity:.35;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}}
+
 @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:70px}.globe-stage{min-height:380px;grid-row:1}.hero-copy{grid-row:2}.label-top{right:4%}.label-bottom{left:3%}.about-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.nav-links{gap:12px}.nav-status{display:none}}
 @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{font-size:.75rem;gap:10px}.nav-links a:nth-child(2){display:none}.hero{min-height:auto;padding:28px 0 60px;gap:0}.globe-stage{min-height:310px}.globe-label{font-size:.6rem;padding:8px}.label-top{top:8%}.label-bottom{bottom:9%}h1{font-size:3.55rem}.hero-copy p{font-size:.97rem}.stats{margin-bottom:65px}.stat{padding:16px 10px}.stat b{font-size:1.1rem}.stat span{font-size:.68rem}.project-grid,.skills{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:7px;padding:19px}.panel{padding:20px}.contact{padding:24px}.footer{flex-direction:column}}
 </style>
@@ -44,7 +62,7 @@ section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-c
 <main id="top">
 <div class="wrap hero">
   <div class="hero-copy">
-    <div class="kicker"><span class="pulse"></span> Orbital perspective. Grounded engineering.</div>
+    <div class="kicker"><span class="pulse"></span> CONNECTED IDEAS. REAL-WORLD IMPACT.</div>
     <h1>Prajjwal<br><em>Gupta.</em></h1>
     <p>Engineering-minded builder exploring software systems, applied AI, and the infrastructure behind useful products. From storage engines to edge inference, I turn ideas into working, testable projects.</p>
     <div class="actions"><a class="btn primary" href="#projects">Explore my work <span>↘</span></a><a class="btn" href="#contact">Get in touch ↗</a></div>
@@ -52,15 +70,15 @@ section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-c
   </div>
   <div class="globe-stage">
     <div class="globe-halo"></div>
-    <div class="hud-corner hud-tl">SAT-01 <span>● READY</span><br><small>EARTH OBSERVATION</small></div>
-    <div class="hud-corner hud-tr">ORBIT <span>LEO / SIM</span><br><small>TELEMETRY MOCKUP</small></div>
+    <div class="hud-corner hud-tl">NET-01 <span>● ONLINE</span><br><small>GLOBAL NODE MESH</small></div>
+    <div class="hud-corner hud-tr">NODES <span>1,500+</span><br><small>GENERATIVE NETWORK</small></div>
     <div class="hud-corner hud-bl">LAT <span>28.61° N</span><br><small>LONG 77.20° E</small></div>
-    <div class="hud-corner hud-br">SIGNAL <span>98.4%</span><br><small>DECORATIVE READOUT</small></div>
+    <div class="hud-corner hud-br">LINKS <span>ACTIVE</span><br><small>VISUAL SIMULATION</small></div>
     <div class="target-ring" aria-hidden="true"></div>
-    <canvas id="globe" aria-label="Interactive stylized earth globe"></canvas>
-    <div class="globe-label label-top"><strong>ORBITAL VIEW / 01</strong>GLOBAL OBSERVATION NETWORK</div>
-    <div class="globe-label label-bottom"><strong>MISSION MODE: ACTIVE</strong>Drag to rotate the globe</div>
-    <div class="globe-hint">EARTH OBSERVATION SYSTEM // MANUAL ORBIT CONTROL</div>
+    <canvas id="globe" aria-label="Interactive stylized cyber globe; scroll to rotate through the network"></canvas>
+    <div class="globe-label label-top"><strong>CYBER GLOBE / 01</strong>CONNECTED SYSTEMS ONLINE</div>
+    <div class="globe-label label-bottom"><strong>NETWORK MODE: ACTIVE</strong>Scroll to traverse the globe</div>
+    <div class="globe-hint">GLOBAL DATA NETWORK // SCROLL TO EXPLORE</div>
   </div>
 </div>
 <div class="wrap stats">
@@ -172,7 +190,7 @@ section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-c
 (() => {
   const canvas = document.getElementById('globe');
   const ctx = canvas.getContext('2d');
-  let w=0,h=0,dpr=1,rotY=-0.45,rotX=0.18,dragging=false,lastX=0,lastY=0,auto=true;
+  let w=0,h=0,dpr=1,rotY=-0.45,rotX=0.18,dragging=false,lastX=0,lastY=0,auto=true,scrollProgress=0,scrollVelocity=0;
   const stars=Array.from({length:180},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.2+.2,a:Math.random()*.45+.08}));
   const dots=[];
   for(let i=0;i<1500;i++){
@@ -188,8 +206,9 @@ section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-c
   ];
   function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);w=r.width;h=r.height;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
   function project(lat,lon,R,cx,cy){
+    const activeRotY=rotY+scrollProgress*Math.PI*2.8;
     let x=Math.cos(lat)*Math.sin(lon), y=Math.sin(lat), z=Math.cos(lat)*Math.cos(lon);
-    let x1=x*Math.cos(rotY)+z*Math.sin(rotY), z1=-x*Math.sin(rotY)+z*Math.cos(rotY);
+    let x1=x*Math.cos(activeRotY)+z*Math.sin(activeRotY), z1=-x*Math.sin(activeRotY)+z*Math.cos(activeRotY);
     let y1=y*Math.cos(rotX)-z1*Math.sin(rotX), z2=y*Math.sin(rotX)+z1*Math.cos(rotX);
     return {x:cx+x1*R,y:cy-y1*R,z:z2,vis:z2>-.02};
   }
@@ -200,6 +219,8 @@ section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-c
   }
   function draw(){
     ctx.clearRect(0,0,w,h);const cx=w/2,cy=h/2,R=Math.min(w,h)*.39;
+    const scrollTurn=scrollProgress*Math.PI*2.8;
+    const drawRotY=rotY+scrollTurn;
     stars.forEach(s=>{ctx.globalAlpha=s.a;ctx.fillStyle='#b7eaff';ctx.beginPath();ctx.arc(s.x*w,s.y*h,s.r,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
     // orbital rings
     ctx.strokeStyle='rgba(130,219,157,.12)';ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(cx,cy,R*1.19,R*.36,-.25,0,Math.PI*2);ctx.stroke();
@@ -210,14 +231,34 @@ section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-c
     ctx.strokeStyle='rgba(133,218,160,.16)';ctx.lineWidth=.7;
     for(let lat=-1.2;lat<=1.2;lat+=.3){ctx.beginPath();for(let lon=0;lon<=Math.PI*2+.04;lon+=.04){const p=project(lat,lon,R,cx,cy);if(lon===0)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)}ctx.stroke()}
     for(let lon=0;lon<Math.PI;lon+=Math.PI/8){ctx.beginPath();for(let lat=-Math.PI/2;lat<=Math.PI/2+.03;lat+=.03){const p=project(lat,lon,R,cx,cy);if(lat<-.01)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)}ctx.stroke()}
-    dots.forEach(d=>{const p=project(d.lat,d.lon,R,cx,cy);if(!p.vis)return;const landDot=isLand(d.lat,d.lon);ctx.globalAlpha=landDot?.9:.26;ctx.fillStyle=landDot?'#9beeff':'#579ebd';ctx.beginPath();ctx.arc(p.x,p.y,landDot?1.15:.65,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
+    const network=[];
+    for(let i=0;i<dots.length;i+=7){
+      const d=dots[i],p=project(d.lat,d.lon,R,cx,cy);
+      if(p.vis)network.push({x:p.x,y:p.y,z:p.z,land:isLand(d.lat,d.lon)});
+    }
+    ctx.lineWidth=.65;
+    for(let i=0;i<network.length;i++){
+      let links=0;
+      for(let j=i+1;j<network.length&&links<3;j++){
+        const a=network[i],b=network[j],dx=a.x-b.x,dy=a.y-b.y,dist=dx*dx+dy*dy;
+        if(dist<Math.pow(R*.19,2)){
+          ctx.strokeStyle='rgba(64,190,255,'+(0.2*(1-scrollProgress*.25)+.035)+')';
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();links++;
+        }
+      }
+    }
+    dots.forEach(d=>{const p=project(d.lat,d.lon,R,cx,cy);if(!p.vis)return;const landDot=isLand(d.lat,d.lon);ctx.globalAlpha=landDot?.92:.34;ctx.fillStyle=landDot?'#b3f7ff':'#38baff';ctx.beginPath();ctx.arc(p.x,p.y,landDot?1.25:.7,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
     // highlighted route / location markers
     [{lat:.49,lon:-2.2,label:'AMERICAS'},{lat:.27,lon:.18,label:'EUROPE'},{lat:.28,lon:1.35,label:'ASIA'}].forEach((m,i)=>{const p=project(m.lat,m.lon,R,cx,cy);if(p.vis){ctx.strokeStyle=i===2?'#c5ff91':'#7ee7ff';ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(p.x,p.y,5,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#c5ff91';ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill()}});
     ctx.restore();
-    ctx.strokeStyle='rgba(126,231,255,.42)';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
-    if(auto&&!dragging)rotY+=.0018;
+    ctx.strokeStyle='rgba(84,217,255,.62)';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
+    if(auto&&!dragging)rotY+=.00065;
+    scrollVelocity*=.92;
+    const stage=document.querySelector('.globe-stage');
+    if(stage){const halo=stage.querySelector('.globe-halo');if(halo){halo.style.transform='scale('+(1+scrollProgress*.12)+')';halo.style.opacity=String(1-scrollProgress*.18)}}
     requestAnimationFrame(draw);
   }
+  window.addEventListener('scroll',()=>{const maxScroll=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);scrollProgress=Math.max(0,Math.min(1,window.scrollY/maxScroll));},{passive:true});
   canvas.addEventListener('pointerdown',e=>{dragging=true;auto=false;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId)});
   canvas.addEventListener('pointermove',e=>{if(!dragging)return;rotY+=(e.clientX-lastX)*.008;rotX=Math.max(-1.1,Math.min(1.1,rotX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY});
   canvas.addEventListener('pointerup',()=>{dragging=false});canvas.addEventListener('pointercancel',()=>dragging=false);
