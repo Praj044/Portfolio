@@ -1,1 +1,221 @@
-<!-- placeholder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#07111b" />
+<meta name="description" content="Prajjwal Gupta — systems engineering, applied AI, edge ML, and full-stack projects." />
+<title>Prajjwal Gupta — Earthbound | Orbital Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111b;--panel:#0b1c2a;--panel2:#10283a;--text:#edf7ff;--muted:#9db3c5;--green:#7ee7ff;--lime:#c5ff91;--line:rgba(172,218,240,.16);--orange:#ffbd78}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.mono,.eyebrow,.tag,.nav-status{font-family:"DM Mono",monospace}.mono,.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}.nav{position:sticky;top:0;z-index:10;background:rgba(7,17,27,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:-.04em}.brand span{color:var(--green)}.nav-links{display:flex;gap:24px;color:var(--muted);font-size:.88rem}.nav-links a:hover{color:var(--green)}.nav-status{font-size:.68rem;color:var(--green);border:1px solid rgba(126,231,255,.3);padding:7px 10px;border-radius:99px;white-space:nowrap}
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding:58px 0 76px;position:relative}.hero:before{content:"";position:absolute;width:520px;height:520px;left:-260px;top:8%;border-radius:50%;background:radial-gradient(circle,rgba(39,137,185,.16),transparent 70%);pointer-events:none}.hero-copy{position:relative;z-index:1}.kicker{display:flex;align-items:center;gap:10px;color:var(--green);font: .75rem "DM Mono",monospace;text-transform:uppercase;letter-spacing:.12em}.pulse{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 15px var(--lime)}h1{font-size:clamp(3.2rem,7.2vw,6.5rem);line-height:.98;letter-spacing:-.075em;margin:22px 0 24px;font-weight:800}h1 em{font-style:normal;color:var(--green)}.hero-copy p{max-width:580px;font-size:1.08rem;color:var(--muted);line-height:1.8}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border:1px solid var(--line);border-radius:8px;font-weight:700;font-size:.9rem;transition:.2s}.btn.primary{background:var(--green);color:#071723;border-color:var(--green)}.btn:hover{transform:translateY(-2px);border-color:var(--green)}.hero-note{margin-top:24px;color:#6f8fa3;font: .72rem "DM Mono",monospace}
+.globe-stage{min-height:480px;display:grid;place-items:center;position:relative;isolation:isolate}.globe-halo{position:absolute;width:min(94%,470px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(42,160,211,.18),rgba(10,43,66,.1) 52%,transparent 72%);filter:blur(8px)}#globe{width:100%;max-width:560px;aspect-ratio:1;position:relative;z-index:1;cursor:grab}#globe:active{cursor:grabbing}.globe-label{position:absolute;z-index:2;background:rgba(7,20,33,.88);border:1px solid var(--line);padding:11px 13px;border-radius:8px;backdrop-filter:blur(12px);font: .7rem "DM Mono",monospace;color:var(--muted)}.globe-label strong{display:block;color:var(--text);font-size:.82rem;font-weight:500}.label-top{top:12%;right:0}.label-bottom{bottom:14%;left:0}.globe-hint{position:absolute;bottom:0;font: .65rem "DM Mono",monospace;color:#63859a;letter-spacing:.1em}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line);margin-bottom:100px}.stat{padding:22px 18px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{display:block;font-size:1.35rem;letter-spacing:-.04em}.stat span{font-size:.78rem;color:var(--muted)}
+section{padding:24px 0 88px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}.section-head h2{font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.065em;line-height:1.1;margin:8px 0 0}.section-head p{max-width:430px;color:var(--muted);font-size:.9rem;margin:0}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.panel{background:linear-gradient(145deg,rgba(16,40,59,.92),rgba(8,24,39,.94));border:1px solid var(--line);border-radius:14px;padding:26px}.about-text{font-size:1.05rem;color:#c3d5c8;line-height:1.9}.about-text strong{color:var(--text)}.focus-list{display:grid;gap:12px;margin-top:22px}.focus{display:flex;gap:12px;align-items:center;color:#c3d5c8;font-size:.9rem}.focus i{font-style:normal;color:var(--green);font: .75rem "DM Mono",monospace;border:1px solid rgba(126,231,255,.25);border-radius:6px;padding:6px 8px}.mini-title{font: .7rem "DM Mono",monospace;color:var(--green);letter-spacing:.1em;text-transform:uppercase}.edu-title{font-size:1.2rem;font-weight:800;margin:13px 0 5px}.muted{color:var(--muted)}.timeline{display:grid;gap:16px}.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:24px;border:1px solid var(--line);border-radius:12px;background:rgba(10,29,45,.62)}.timeline-date{font: .75rem "DM Mono",monospace;color:var(--green);padding-top:5px}.timeline-item h3{margin:0 0 5px;font-size:1.15rem}.timeline-item .org{color:var(--muted);font-size:.9rem}.timeline-item p{color:#bfd3e0;margin:12px 0 0;font-size:.92rem}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{padding:25px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(15,40,60,.9),rgba(7,22,36,.95));display:flex;flex-direction:column;min-height:300px;transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-4px);border-color:rgba(126,231,255,.5)}.project-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.project-num{font: .72rem "DM Mono",monospace;color:var(--green)}.project-type{font: .65rem "DM Mono",monospace;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 9px}.project h3{font-size:1.45rem;letter-spacing:-.04em;margin:22px 0 8px}.project p{color:var(--muted);font-size:.9rem;line-height:1.75;margin:0 0 20px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}.tag{font-size:.67rem;color:#c3dce9;background:rgba(126,231,255,.07);border:1px solid rgba(126,231,255,.12);padding:6px 8px;border-radius:5px}.project-foot{display:flex;gap:15px;margin-top:20px;font-size:.8rem;color:var(--green)}.project-foot a:hover{text-decoration:underline}.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill-card{padding:21px;border:1px solid var(--line);border-radius:12px;background:rgba(10,29,45,.62)}.skill-card h3{font-size:.95rem;margin:0 0 14px}.skill-card p{color:var(--muted);font-size:.85rem;line-height:1.9;margin:0}
+.contact{padding:35px;border-radius:16px;border:1px solid rgba(126,231,255,.25);background:radial-gradient(circle at 90% 10%,rgba(35,144,190,.18),transparent 38%),var(--panel)}.contact h2{font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.07em;line-height:1.05;margin:10px 0 15px}.contact p{max-width:570px;color:var(--muted)}.contact-row{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}.footer{padding:25px 0 35px;color:#63859a;font: .7rem "DM Mono",monospace;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:60px}
+
+/* Satellite / mission-control layer */
+.globe-stage{overflow:hidden}
+.globe-stage:before{content:"";position:absolute;inset:7% 3%;border:1px solid rgba(126,231,255,.12);border-radius:14px;pointer-events:none;background:linear-gradient(90deg,rgba(126,231,255,.035) 1px,transparent 1px),linear-gradient(rgba(126,231,255,.035) 1px,transparent 1px);background-size:32px 32px;mask-image:radial-gradient(ellipse at center,#000 25%,transparent 78%)}
+.globe-stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(126,231,255,.018) 6px 7px);z-index:3;opacity:.55}
+.hud-corner{position:absolute;z-index:4;font: .62rem "DM Mono",monospace;letter-spacing:.07em;color:#8caabd;line-height:1.8;text-shadow:0 0 14px rgba(7,17,27,.8)}
+.hud-corner span{color:var(--green);padding-left:4px}.hud-corner small{font-size:.54rem;color:#54778d;letter-spacing:.1em}
+.hud-tl{top:4%;left:3%}.hud-tr{top:4%;right:3%;text-align:right}.hud-bl{bottom:7%;left:3%}.hud-br{bottom:7%;right:3%;text-align:right}
+.target-ring{position:absolute;width:72%;aspect-ratio:1;border:1px dashed rgba(126,231,255,.13);border-radius:50%;pointer-events:none;z-index:0}
+.nav-status{border-radius:4px;letter-spacing:.06em}.status-dot{display:inline-block;width:6px;height:6px;background:var(--lime);border-radius:50%;margin-right:5px;box-shadow:0 0 10px var(--lime)}
+.btn.primary{box-shadow:0 0 22px rgba(126,231,255,.12)}
+.project:hover{box-shadow:0 8px 35px rgba(16,105,145,.08)}
+@media(max-width:560px){.hud-corner{font-size:.52rem}.hud-corner small{font-size:.46rem}.hud-tl,.hud-bl{left:1%}.hud-tr,.hud-br{right:1%}.target-ring{width:80%}}
+
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:70px}.globe-stage{min-height:380px;grid-row:1}.hero-copy{grid-row:2}.label-top{right:4%}.label-bottom{left:3%}.about-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.nav-links{gap:12px}.nav-status{display:none}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{font-size:.75rem;gap:10px}.nav-links a:nth-child(2){display:none}.hero{min-height:auto;padding:28px 0 60px;gap:0}.globe-stage{min-height:310px}.globe-label{font-size:.6rem;padding:8px}.label-top{top:8%}.label-bottom{bottom:9%}h1{font-size:3.55rem}.hero-copy p{font-size:.97rem}.stats{margin-bottom:65px}.stat{padding:16px 10px}.stat b{font-size:1.1rem}.stat span{font-size:.68rem}.project-grid,.skills{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:7px;padding:19px}.panel{padding:20px}.contact{padding:24px}.footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap nav-inner">
+<a class="brand" href="#top" aria-label="Prajjwal Gupta home">PG<span>.</span></a>
+<div class="nav-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a></div>
+<div class="nav-status"><span class="status-dot"></span> PORTFOLIO SYSTEM ONLINE</div>
+</div></nav>
+<main id="top">
+<div class="wrap hero">
+  <div class="hero-copy">
+    <div class="kicker"><span class="pulse"></span> Orbital perspective. Grounded engineering.</div>
+    <h1>Prajjwal<br><em>Gupta.</em></h1>
+    <p>Engineering-minded builder exploring software systems, applied AI, and the infrastructure behind useful products. From storage engines to edge inference, I turn ideas into working, testable projects.</p>
+    <div class="actions"><a class="btn primary" href="#projects">Explore my work <span>↘</span></a><a class="btn" href="#contact">Get in touch ↗</a></div>
+    <div class="hero-note">ECE / VLSI DESIGN & TECHNOLOGY · MAIT, GGSIPU · INDIA</div>
+  </div>
+  <div class="globe-stage">
+    <div class="globe-halo"></div>
+    <div class="hud-corner hud-tl">SAT-01 <span>● READY</span><br><small>EARTH OBSERVATION</small></div>
+    <div class="hud-corner hud-tr">ORBIT <span>LEO / SIM</span><br><small>TELEMETRY MOCKUP</small></div>
+    <div class="hud-corner hud-bl">LAT <span>28.61° N</span><br><small>LONG 77.20° E</small></div>
+    <div class="hud-corner hud-br">SIGNAL <span>98.4%</span><br><small>DECORATIVE READOUT</small></div>
+    <div class="target-ring" aria-hidden="true"></div>
+    <canvas id="globe" aria-label="Interactive stylized earth globe"></canvas>
+    <div class="globe-label label-top"><strong>ORBITAL VIEW / 01</strong>GLOBAL OBSERVATION NETWORK</div>
+    <div class="globe-label label-bottom"><strong>MISSION MODE: ACTIVE</strong>Drag to rotate the globe</div>
+    <div class="globe-hint">EARTH OBSERVATION SYSTEM // MANUAL ORBIT CONTROL</div>
+  </div>
+</div>
+<div class="wrap stats">
+  <div class="stat"><b>Systems</b><span>Storage engines & backend platforms</span></div>
+  <div class="stat"><b>Applied AI</b><span>Security, ML & edge inference</span></div>
+  <div class="stat"><b>From idea → build</b><span>Projects focused on working software</span></div>
+</div>
+
+<section id="about" class="wrap">
+  <div class="section-head"><div><div class="eyebrow">01 / About</div><h2>A curious engineer.<br>A practical builder.</h2></div><p>A snapshot of what I study, what I build, and the problems I enjoy working on.</p></div>
+  <div class="about-grid">
+    <div class="panel">
+      <div class="mini-title">A little about me</div>
+      <p class="about-text">I’m <strong>Prajjwal Gupta</strong>, a B.Tech student at <strong>Maharaja Agrasen Institute of Technology (MAIT), GGSIPU</strong>, specializing in Electronics & Communication Engineering — VLSI Design & Technology. Alongside my core studies, I build software projects across <strong>C++, backend engineering, AI/ML, and developer tooling</strong>.</p>
+      <p class="about-text">My project work ranges from a persistent LSM-tree storage engine to an AI-assisted cybersecurity platform and an edge-inference workflow for SEM defect classification. I’m interested in understanding how systems work beneath the interface—and making them reliable, testable, and useful.</p>
+    </div>
+    <div class="panel">
+      <div class="mini-title">Currently focused on</div>
+      <div class="focus-list">
+        <div class="focus"><i>01</i> Data structures, algorithms & C++</div>
+        <div class="focus"><i>02</i> Backend systems & API design</div>
+        <div class="focus"><i>03</i> Applied machine learning</div>
+        <div class="focus"><i>04</i> Performance, testing & deployment</div>
+      </div>
+      <div style="height:22px"></div><div class="mini-title">Education</div>
+      <div class="edu-title">B.Tech — ECE (VLSI Design & Technology)</div>
+      <div class="muted">MAIT · Guru Gobind Singh Indraprastha University</div>
+      <div class="muted" style="margin-top:7px;font-size:.85rem">Expected graduation: 2027</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="wrap">
+  <div class="section-head"><div><div class="eyebrow">02 / Experience</div><h2>Learning by building.</h2></div><p>Practical experience applying engineering tools to real technical workflows.</p></div>
+  <div class="timeline">
+    <article class="timeline-item">
+      <div class="timeline-date">16 JUN — 15 AUG 2026</div>
+      <div><h3>Edge AI, ONNX & Application Development</h3><div class="org">DRDO · Solid State Physics Laboratory (SSPL) — Internship</div>
+      <p>Worked on a scanning electron microscope (SEM) image defect-classification workflow. Focus areas included model export to ONNX, ONNX Runtime inference, input validation, single-image and batch prediction, confidence and latency reporting, CSV export, and a Streamlit application for model interaction.</p>
+      <div class="tags" style="margin-top:15px"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">ONNX</span><span class="tag">ONNX Runtime</span><span class="tag">Streamlit</span></div></div>
+    </article>
+  </div>
+</section>
+
+<section id="projects" class="wrap">
+  <div class="section-head"><div><div class="eyebrow">03 / Selected work</div><h2>Projects from the ground up.</h2></div><p>A selection across systems programming, AI security, computer vision, and full-stack product development.</p></div>
+  <div class="project-grid">
+    <article class="project">
+      <div class="project-top"><span class="project-num">PROJECT / 01</span><span class="project-type">SYSTEMS · C++20</span></div>
+      <h3>LSM-Tree Storage Engine</h3>
+      <p>A persistent key-value storage engine built around skip-list memtables, a write-ahead log, sorted-string tables, Bloom filters, and size-tiered compaction. Benchmarked at 10,540 ops/sec across 300K operations with zero errors in the reported run.</p>
+      <div class="tags"><span class="tag">C++20</span><span class="tag">WAL</span><span class="tag">SSTables</span><span class="tag">Bloom Filters</span><span class="tag">Compaction</span></div>
+      <div class="project-foot"><a href="https://github.com/Praj044/LSM-Storage-Engine" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+    </article>
+    <article class="project">
+      <div class="project-top"><span class="project-num">PROJECT / 02</span><span class="project-type">AI · CYBERSECURITY</span></div>
+      <h3>AI CyberShield</h3>
+      <p>A hybrid cybersecurity dashboard that combines phishing-email and URL analysis, password-strength checks, threat-intelligence lookups, and contextual AI reasoning into a unified risk score.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">TF-IDF</span><span class="tag">Gemini API</span><span class="tag">VirusTotal</span><span class="tag">Streamlit</span><span class="tag">Azure</span></div>
+      <div class="project-foot"><a href="https://github.com/Praj044/AI-Cybershield" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+    </article>
+    <article class="project">
+      <div class="project-top"><span class="project-num">PROJECT / 03</span><span class="project-type">EDGE AI · COMPUTER VISION</span></div>
+      <h3>SEM Defect Classification</h3>
+      <p>An image-classification workflow for SEM defect categories, with an exported ONNX model and an application for validated single and batch predictions, confidence and latency reporting, and CSV output.</p>
+      <div class="tags"><span class="tag">PyTorch</span><span class="tag">ONNX Runtime</span><span class="tag">NumPy</span><span class="tag">Pillow</span><span class="tag">Streamlit</span></div>
+      <div class="project-foot"><a href="https://github.com/Praj044/Sem_Defect" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+    </article>
+    <article class="project">
+      <div class="project-top"><span class="project-num">PROJECT / 04</span><span class="project-type">FULL STACK · WEB</span></div>
+      <h3>Shipment Tracking Platform</h3>
+      <p>A DHL-inspired shipment tracking product with a Spring Boot backend, React frontend, PostgreSQL persistence, database migrations, containerized local services, and JWT-oriented authentication components.</p>
+      <div class="tags"><span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Docker Compose</span><span class="tag">Flyway</span></div>
+      <div class="project-foot"><a href="mailto:p84610501@gmail.com?subject=Shipment%20Tracking%20Platform">Ask about the build ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="wrap">
+  <div class="section-head"><div><div class="eyebrow">04 / Toolkit</div><h2>Tools I work with.</h2></div><p>A project-led snapshot of technologies used across the work above. This list can be refined for each target role.</p></div>
+  <div class="skills">
+    <div class="skill-card"><h3>Programming</h3><p>C++ · Python · Java · SQL · JavaScript</p></div>
+    <div class="skill-card"><h3>Systems & Backend</h3><p>Data structures · Storage engines · Spring Boot · REST APIs · PostgreSQL · JWT</p></div>
+    <div class="skill-card"><h3>AI / ML</h3><p>Scikit-learn · TF-IDF · Logistic Regression · PyTorch · ONNX · ONNX Runtime</p></div>
+    <div class="skill-card"><h3>Security</h3><p>Phishing detection · URL analysis · Threat intelligence · Password-strength analysis</p></div>
+    <div class="skill-card"><h3>Tools & Deployment</h3><p>Git · GitHub Actions · Docker Compose · Streamlit · Azure App Service · CMake</p></div>
+    <div class="skill-card"><h3>Frontend & Data</h3><p>React · HTML · CSS · Excel · Tableau</p></div>
+  </div>
+</section>
+
+<section id="contact" class="wrap">
+  <div class="contact">
+    <div class="contact-row"><div><div class="eyebrow">05 / Contact</div><h2>Have a problem<br>worth building for?</h2><p>I’m interested in software engineering opportunities where I can contribute, learn from strong teams, and build reliable products. Reach me directly by email, or explore my code and professional profile through the links below.</p></div>
+    <div class="actions"><a class="btn primary" href="mailto:p84610501@gmail.com">Email me ↗</a>
+    <a class="btn" href="https://github.com/Praj044" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <a class="btn" href="https://www.linkedin.com/in/prajjwal-gupta-20792b291" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
+  </div>
+</section>
+</main>
+<footer class="wrap footer"><span>© 2026 PRAJJWAL GUPTA</span><span><a href="https://github.com/Praj044" target="_blank" rel="noopener noreferrer">GITHUB ↗</a> · <a href="https://www.linkedin.com/in/prajjwal-gupta-20792b291" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a> · GROUNDED ON EARTH 🌍</span></footer>
+<script>
+(() => {
+  const canvas = document.getElementById('globe');
+  const ctx = canvas.getContext('2d');
+  let w=0,h=0,dpr=1,rotY=-0.45,rotX=0.18,dragging=false,lastX=0,lastY=0,auto=true;
+  const stars=Array.from({length:180},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.2+.2,a:Math.random()*.45+.08}));
+  const dots=[];
+  for(let i=0;i<1500;i++){
+    const lat=Math.acos(2*Math.random()-1)-Math.PI/2, lon=Math.random()*Math.PI*2;
+    dots.push({lat,lon});
+  }
+  // Stylized, deterministic land masses: organic continent-like blobs on a sphere.
+  const land=[
+    {lat:.63,lon:-1.85,rx:.43,ry:.60},{lat:.05,lon:-1.55,rx:.24,ry:.62},
+    {lat:.72,lon:.15,rx:.31,ry:.30},{lat:.25,lon:.45,rx:.34,ry:.70},
+    {lat:-.48,lon:.62,rx:.24,ry:.48},{lat:.15,lon:1.75,rx:.43,ry:.40},
+    {lat:-.15,lon:2.15,rx:.33,ry:.38},{lat:1.1,lon:-.4,rx:.25,ry:.15}
+  ];
+  function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);w=r.width;h=r.height;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function project(lat,lon,R,cx,cy){
+    let x=Math.cos(lat)*Math.sin(lon), y=Math.sin(lat), z=Math.cos(lat)*Math.cos(lon);
+    let x1=x*Math.cos(rotY)+z*Math.sin(rotY), z1=-x*Math.sin(rotY)+z*Math.cos(rotY);
+    let y1=y*Math.cos(rotX)-z1*Math.sin(rotX), z2=y*Math.sin(rotX)+z1*Math.cos(rotX);
+    return {x:cx+x1*R,y:cy-y1*R,z:z2,vis:z2>-.02};
+  }
+  function wrapLon(a){while(a>Math.PI)a-=2*Math.PI;while(a< -Math.PI)a+=2*Math.PI;return a}
+  function isLand(lat,lon){
+    for(const c of land){let dx=wrapLon(lon-c.lon)*Math.cos(c.lat),dy=lat-c.lat;let noise=Math.sin(lon*17+lat*9)*.045+Math.sin(lon*31-lat*15)*.022;if((dx*dx)/(c.rx*c.rx)+(dy*dy)/(c.ry*c.ry)<1+noise)return true}
+    return false;
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h);const cx=w/2,cy=h/2,R=Math.min(w,h)*.39;
+    stars.forEach(s=>{ctx.globalAlpha=s.a;ctx.fillStyle='#b7eaff';ctx.beginPath();ctx.arc(s.x*w,s.y*h,s.r,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
+    // orbital rings
+    ctx.strokeStyle='rgba(130,219,157,.12)';ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(cx,cy,R*1.19,R*.36,-.25,0,Math.PI*2);ctx.stroke();
+    const grad=ctx.createRadialGradient(cx-R*.3,cy-R*.35,R*.08,cx,cy,R*1.1);grad.addColorStop(0,'#1a5273');grad.addColorStop(.55,'#0b2d45');grad.addColorStop(1,'#06131f');
+    ctx.fillStyle=grad;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fill();
+    ctx.save();ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.clip();
+    // grid
+    ctx.strokeStyle='rgba(133,218,160,.16)';ctx.lineWidth=.7;
+    for(let lat=-1.2;lat<=1.2;lat+=.3){ctx.beginPath();for(let lon=0;lon<=Math.PI*2+.04;lon+=.04){const p=project(lat,lon,R,cx,cy);if(lon===0)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)}ctx.stroke()}
+    for(let lon=0;lon<Math.PI;lon+=Math.PI/8){ctx.beginPath();for(let lat=-Math.PI/2;lat<=Math.PI/2+.03;lat+=.03){const p=project(lat,lon,R,cx,cy);if(lat<-.01)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)}ctx.stroke()}
+    dots.forEach(d=>{const p=project(d.lat,d.lon,R,cx,cy);if(!p.vis)return;const landDot=isLand(d.lat,d.lon);ctx.globalAlpha=landDot?.9:.26;ctx.fillStyle=landDot?'#9beeff':'#579ebd';ctx.beginPath();ctx.arc(p.x,p.y,landDot?1.15:.65,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
+    // highlighted route / location markers
+    [{lat:.49,lon:-2.2,label:'AMERICAS'},{lat:.27,lon:.18,label:'EUROPE'},{lat:.28,lon:1.35,label:'ASIA'}].forEach((m,i)=>{const p=project(m.lat,m.lon,R,cx,cy);if(p.vis){ctx.strokeStyle=i===2?'#c5ff91':'#7ee7ff';ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(p.x,p.y,5,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#c5ff91';ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill()}});
+    ctx.restore();
+    ctx.strokeStyle='rgba(126,231,255,.42)';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
+    if(auto&&!dragging)rotY+=.0018;
+    requestAnimationFrame(draw);
+  }
+  canvas.addEventListener('pointerdown',e=>{dragging=true;auto=false;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId)});
+  canvas.addEventListener('pointermove',e=>{if(!dragging)return;rotY+=(e.clientX-lastX)*.008;rotX=Math.max(-1.1,Math.min(1.1,rotX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY});
+  canvas.addEventListener('pointerup',()=>{dragging=false});canvas.addEventListener('pointercancel',()=>dragging=false);
+  window.addEventListener('resize',resize);resize();draw();
+})();
+</script>
+</body>
+</html>
