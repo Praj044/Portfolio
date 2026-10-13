@@ -61,12 +61,14 @@ body{background-image:radial-gradient(ellipse at 78% 10%,rgba(0,112,210,.13),tra
 </div></nav>
 <main id="top">
 
+<canvas id="ambientNetwork" aria-hidden="true"></canvas>
 <main id="bookExperience" class="book-experience">
   <div class="book-intro">
     <div class="eyebrow">AN INTERACTIVE PORTFOLIO · 2026 EDITION</div>
     <h1>My story, <em>page by page.</em></h1>
     <p>Click a page corner, use the arrows, or press ← → to explore my work.</p>
   </div>
+  <div class="book-progress" aria-hidden="true"><span id="bookProgressFill"></span></div>
   <div class="book-toolbar">
     <span class="book-counter" id="bookCounter">COVER · 01 / 06</span>
     <div class="book-tools">
@@ -132,6 +134,7 @@ body{background-image:radial-gradient(ellipse at 78% 10%,rgba(0,112,210,.13),tra
 </main>
 <footer class="book-footer"><span>EARTHBOUND · PRAJJWAL GUPTA</span><span>DESIGNED TO BE EXPLORED</span></footer>
 
+<style>
 /* Interactive portfolio book */
 body{background:#07101d;background-image:radial-gradient(ellipse at 50% 20%,rgba(25,115,180,.16),transparent 44%),radial-gradient(ellipse at 10% 75%,rgba(30,60,130,.1),transparent 32%);overflow-x:hidden}
 .nav{position:relative}
@@ -252,13 +255,39 @@ body{background:#07101d;background-image:radial-gradient(ellipse at 50% 20%,rgba
 @media(max-width:420px){.book-scene,.portfolio-book,.cover-leaf,.content-leaf{min-height:700px}.paper-body{max-height:600px}.book-toolbar{align-items:flex-start}.cover-content h2{font-size:3.5rem}.fact-grid{gap:6px}.fact-grid div{padding:10px 7px}}
 @media(prefers-reduced-motion:reduce){.book-leaf,.portfolio-book,.book-tool,.page-hotspot{transition:none!important}.book-intro *{animation:none!important}}
 
+#ambientNetwork{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.68}
+.book-experience{position:relative;z-index:1}
+.book-progress{height:2px;width:min(100%,1020px);margin:0 auto 13px;background:rgba(84,217,255,.1);overflow:hidden;border-radius:2px}
+#bookProgressFill{display:block;width:12.5%;height:100%;background:linear-gradient(90deg,#1687ff,#75efff);box-shadow:0 0 16px rgba(84,217,255,.75);transition:width .65s cubic-bezier(.2,.7,.2,1)}
+.book-scene{transform-style:preserve-3d;transition:filter .35s}
+.book-shadow{transition:transform .3s,opacity .3s;transform:translateZ(-45px)}
+.portfolio-book{transform-origin:center center;will-change:transform;filter:drop-shadow(0 24px 24px rgba(0,0,0,.18))}
+.content-leaf:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.44),transparent 18%,transparent 78%,rgba(8,54,78,.08));opacity:.48;mix-blend-mode:soft-light}
+.cover-leaf:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.09),transparent 25%,transparent 70%,rgba(0,0,0,.24))}
+.cover-globe{transform:translateZ(35px);animation:globeFloat 8s ease-in-out infinite;will-change:transform}
+.cover-orbit{animation:orbitDrift 18s linear infinite}.orbit-b{animation-direction:reverse}
+.cover-node{animation:nodePulse 2.8s ease-in-out infinite}.node-b{animation-delay:.8s}.node-c{animation-delay:1.5s}
+.cover-content{transform:translateZ(24px)}.cover-top,.cover-bottom{transform:translateZ(10px)}
+.book-leaf.is-visible{box-shadow:inset 0 0 0 1px rgba(140,205,230,.2),inset 0 0 35px rgba(10,50,70,.06)}
+.book-leaf.is-turning-out{filter:brightness(.88)}
+.page-hotspot{backdrop-filter:blur(8px)}
+.book-tool:focus-visible,.page-hotspot:focus-visible,.paper-link:focus-visible,.contents-card button:focus-visible{outline:2px solid #75efff;outline-offset:3px}
+.book-intro h1{animation:introRise .8s cubic-bezier(.2,.7,.2,1) both}.book-intro p{animation:introRise .8s .12s both}
+@keyframes globeFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes orbitDrift{from{rotate:0deg}to{rotate:360deg}}
+@keyframes nodePulse{0%,100%{opacity:.6;scale:1}50%{opacity:1;scale:1.7}}
+@keyframes introRise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.cover-globe{transform:none;animation:none}.cover-content,.cover-top,.cover-bottom{transform:none}}
+@media(prefers-reduced-motion:reduce){#bookProgressFill,.cover-globe,.cover-orbit,.cover-node,.book-intro h1,.book-intro p{animation:none!important;transition:none!important}}
 
+</style>
 <script>
 (() => {
   const book = document.getElementById('portfolioBook');
   const leaves = [...book.querySelectorAll('.book-leaf')];
   const counter = document.getElementById('bookCounter');
   const hint = document.getElementById('bookHint');
+  const progressFill = document.getElementById('bookProgressFill');
   const prev = document.getElementById('prevBtn');
   const next = document.getElementById('nextBtn');
   const contents = document.getElementById('contentsPanel');
@@ -276,6 +305,7 @@ body{background:#07101d;background-image:radial-gradient(ellipse at 50% 20%,rgba
       }
     });
     counter.textContent = page===0 ? 'COVER · 01 / 08' : 'PAGE '+String(page).padStart(2,'0')+' / 08';
+    if(progressFill) progressFill.style.width=((page+1)/total*100)+'%';
     prev.disabled = page===0;
     next.disabled = page===total-1;
     prev.style.opacity = page===0 ? '.35' : '1';
@@ -312,7 +342,25 @@ body{background:#07101d;background-image:radial-gradient(ellipse at 50% 20%,rgba
     if(e.key==='Home'){e.preventDefault();go(0)}
     if(e.key==='End'){e.preventDefault();go(total-1)}
   });
+
   const scene=document.getElementById('bookScene');
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+    scene.addEventListener('pointermove',e=>{
+      if(busy||e.buttons)return;
+      const r=scene.getBoundingClientRect(),nx=(e.clientX-r.left)/r.width-.5,ny=(e.clientY-r.top)/r.height-.5;
+      book.style.transform='rotateX('+(-ny*3.4)+'deg) rotateY('+(nx*4.2)+'deg) translateY(-2px)';
+      const globe=scene.querySelector('.cover-globe');if(globe)globe.style.translate=(nx*-10)+'px '+(ny*-8)+'px';
+    });
+    scene.addEventListener('pointerleave',()=>{book.style.transform='';const globe=scene.querySelector('.cover-globe');if(globe)globe.style.translate=''});
+  }
+  const ambient=document.getElementById('ambientNetwork');
+  if(ambient&&!reduceMotion){
+    const ctx=ambient.getContext('2d');let points=[],raf=0,ww=0,hh=0;
+    function resizeAmbient(){const dpr=Math.min(window.devicePixelRatio||1,1.6);ww=window.innerWidth;hh=window.innerHeight;ambient.width=Math.round(ww*dpr);ambient.height=Math.round(hh*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);points=Array.from({length:Math.min(68,Math.floor(ww/18))},()=>({x:Math.random()*ww,y:Math.random()*hh,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:.6+Math.random()*1.2}))}
+    function paintAmbient(){ctx.clearRect(0,0,ww,hh);for(let i=0;i<points.length;i++){const p=points[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>ww)p.vx*=-1;if(p.y<0||p.y>hh)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(95,210,255,.58)';ctx.fill();for(let j=i+1;j<points.length;j++){const q=points[j],dx=p.x-q.x,dy=p.y-q.y,d=dx*dx+dy*dy;if(d<125*125){ctx.strokeStyle='rgba(75,174,230,'+(0.12*(1-Math.sqrt(d)/125))+')';ctx.lineWidth=.65;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}}raf=requestAnimationFrame(paintAmbient)}
+    resizeAmbient();paintAmbient();window.addEventListener('resize',resizeAmbient,{passive:true});document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else paintAmbient()});
+  }
   scene.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});
   scene.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>55)go(page+(dx<0?1:-1))},{passive:true});
   document.querySelectorAll('.nav-links a').forEach((a,i)=>a.addEventListener('click',e=>{e.preventDefault();go([1,2,3,6][i]??1)}));
