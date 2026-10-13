@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#07111b" />
-<meta name="description" content="Prajjwal Gupta — SDE portfolio: systems programming, applied AI, and web development." />
-<title>Prajjwal Gupta — Earthbound | Orbital Systems</title>
+<meta name="description" content="Explore Prajjwal Gupta’s software engineering portfolio as an interactive animated book: systems, AI, projects, experience, and skills." />
+<title>Prajjwal Gupta — Earthbound | Interactive Portfolio Book</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -60,210 +60,265 @@ body{background-image:radial-gradient(ellipse at 78% 10%,rgba(0,112,210,.13),tra
 <div class="nav-status"><span class="status-dot"></span> PORTFOLIO SYSTEM ONLINE</div>
 </div></nav>
 <main id="top">
-<div class="wrap hero">
-  <div class="hero-copy">
-    <div class="kicker"><span class="pulse"></span> CONNECTED IDEAS. REAL-WORLD IMPACT.</div>
-    <h1>Prajjwal<br><em>Gupta.</em></h1>
-    <p>Engineering-minded builder exploring software systems, applied AI, and the infrastructure behind useful products. From storage engines to edge inference, I turn ideas into working, testable projects.</p>
-    <div class="actions"><a class="btn primary" href="#projects">Explore my work <span>↘</span></a><a class="btn" href="#contact">Get in touch ↗</a></div>
-    <div class="hero-note">ECE / VLSI DESIGN & TECHNOLOGY · MAIT, GGSIPU · INDIA</div>
-  </div>
-  <div class="globe-stage">
-    <div class="globe-halo"></div>
-    <div class="hud-corner hud-tl">NET-01 <span>● ONLINE</span><br><small>GLOBAL NODE MESH</small></div>
-    <div class="hud-corner hud-tr">NODES <span>1,500+</span><br><small>GENERATIVE NETWORK</small></div>
-    <div class="hud-corner hud-bl">LAT <span>28.61° N</span><br><small>LONG 77.20° E</small></div>
-    <div class="hud-corner hud-br">LINKS <span>ACTIVE</span><br><small>VISUAL SIMULATION</small></div>
-    <div class="target-ring" aria-hidden="true"></div>
-    <canvas id="globe" aria-label="Interactive stylized cyber globe; scroll to rotate through the network"></canvas>
-    <div class="globe-label label-top"><strong>CYBER GLOBE / 01</strong>CONNECTED SYSTEMS ONLINE</div>
-    <div class="globe-label label-bottom"><strong>NETWORK MODE: ACTIVE</strong>Scroll to traverse the globe</div>
-    <div class="globe-hint">GLOBAL DATA NETWORK // SCROLL TO EXPLORE</div>
-  </div>
-</div>
-<div class="wrap stats">
-  <div class="stat"><b>4.5× faster</b><span>SEM inference after ONNX export</span></div>
-  <div class="stat"><b>98.02%</b><span>Best SEM validation accuracy</span></div>
-  <div class="stat"><b>300K ops</b><span>LSM-tree mixed benchmark · zero errors</span></div>
-</div>
 
-<section id="about" class="wrap">
-  <div class="section-head"><div><div class="eyebrow">01 / About</div><h2>A curious engineer.<br>A practical builder.</h2></div><p>A snapshot of what I study, what I build, and the problems I enjoy working on.</p></div>
-  <div class="about-grid">
-    <div class="panel">
-      <div class="mini-title">A little about me</div>
-      <p class="about-text">I’m <strong>Prajjwal Gupta</strong>, a B.Tech student at <strong>Maharaja Agrasen Institute of Technology (MAIT), GGSIPU</strong>, specializing in Electronics & Communication Engineering — VLSI Design & Technology. Alongside my core studies, I build software projects across <strong>C++, backend engineering, AI/ML, and developer tooling</strong>.</p>
-      <p class="about-text">I build software across systems programming, AI-assisted security, and applied machine learning. My work includes a persistent C++20 key-value store, an Azure-deployed threat-analysis app with CI/CD, and an ONNX-optimized SEM classifier developed during my DRDO-SSPL internship. I care about measurable results, testing, and reliable engineering.</p>
-    </div>
-    <div class="panel">
-      <div class="mini-title">Currently focused on</div>
-      <div class="focus-list">
-        <div class="focus"><i>01</i> Data structures, algorithms & C++</div>
-        <div class="focus"><i>02</i> Backend systems & API design</div>
-        <div class="focus"><i>03</i> Applied machine learning</div>
-        <div class="focus"><i>04</i> Performance, testing & deployment</div>
-      </div>
-      <div style="height:22px"></div><div class="mini-title">Education</div>
-      <div class="edu-title">B.Tech — ECE (VLSI Design & Technology)</div>
-      <div class="muted">MAIT · Guru Gobind Singh Indraprastha University</div>
-      <div class="muted" style="margin-top:7px;font-size:.85rem">Aug 2023 – Jun 2027 · CGPA 7.79/10 through Semester 6</div><div class="muted" style="margin-top:5px;font-size:.82rem">Class XII (CBSE): 71.6% · Class X (CBSE): 82.4%</div>
+<main id="bookExperience" class="book-experience">
+  <div class="book-intro">
+    <div class="eyebrow">AN INTERACTIVE PORTFOLIO · 2026 EDITION</div>
+    <h1>My story, <em>page by page.</em></h1>
+    <p>Click a page corner, use the arrows, or press ← → to explore my work.</p>
+  </div>
+  <div class="book-toolbar">
+    <span class="book-counter" id="bookCounter">COVER · 01 / 06</span>
+    <div class="book-tools">
+      <button class="book-tool" id="contentsBtn" type="button" aria-label="Open table of contents">Contents</button>
+      <button class="book-tool" id="prevBtn" type="button" aria-label="Previous page">←</button>
+      <button class="book-tool" id="nextBtn" type="button" aria-label="Next page">→</button>
     </div>
   </div>
-</section>
-
-<section id="experience" class="wrap">
-  <div class="section-head"><div><div class="eyebrow">02 / Experience</div><h2>Learning by building.</h2></div><p>Research and internship experience grounded in shipped applications, testing, and measurable model performance.</p></div>
-  <div class="timeline">
-    <article class="timeline-item">
-      <div class="timeline-date">JUN 2026 — AUG 2026</div>
-      <div><h3>Technical / Research Intern</h3><div class="org">Solid State Physics Laboratory (SSPL), DRDO · Ministry of Defence</div>
-      <p>Built and shipped a SEM defect-classification workflow for eight semiconductor defect types. Achieved 98.02% best validation accuracy (macro F1 0.979), used acquisition-burst-aware splitting to reduce near-duplicate leakage, and reduced per-image inference latency from 2.88 ms to 0.63 ms with ONNX Runtime while maintaining 100% prediction agreement with PyTorch.</p>
-      <div class="tags" style="margin-top:15px"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">ONNX Runtime</span><span class="tag">Streamlit</span><span class="tag">PyTest</span></div>
-      <div class="project-foot"><a href="https://infersem.streamlit.app/" target="_blank" rel="noopener noreferrer">Live application ↗</a><a href="https://github.com/Praj044/Sem_Defect" target="_blank" rel="noopener noreferrer">Source code ↗</a></div></div>
-    </article>
-    <article class="timeline-item">
-      <div class="timeline-date">JUN 2025 — JUL 2025</div>
-      <div><h3>Python Programming Intern</h3><div class="org">Cantilever.in · Remote</div>
-      <p>Built a Tkinter expense tracker backed by SQLite3 with input validation, category-wise totals, and a Matplotlib pie chart. Also developed a command-line contact book with add, search, delete, and list operations persisted to a file.</p>
-      <div class="tags" style="margin-top:15px"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">SQLite3</span><span class="tag">Matplotlib</span></div></div>
+  <div class="book-scene" id="bookScene">
+    <div class="book-shadow"></div>
+    <article class="portfolio-book" id="portfolioBook" aria-live="polite">
+      <div class="book-spine"></div>
+      <section class="book-leaf cover-leaf" data-page="0">
+        <div class="cover-orbit orbit-a"></div><div class="cover-orbit orbit-b"></div>
+        <div class="cover-globe"><div class="cover-grid"></div><div class="cover-node node-a"></div><div class="cover-node node-b"></div><div class="cover-node node-c"></div></div>
+        <div class="cover-top"><span>FIELD NOTES / 001</span><span>EARTHBOUND</span></div>
+        <div class="cover-content"><div class="cover-kicker"><span class="pulse"></span> SOFTWARE · SYSTEMS · APPLIED AI</div><h2>Prajjwal<br><em>Gupta.</em></h2><p>An engineer's journey through code, systems, and connected ideas.</p><span class="cover-cta">OPEN THE BOOK <span>↗</span></span></div>
+        <div class="cover-bottom"><span>PERSONAL PORTFOLIO</span><span>SCROLL LESS. DISCOVER MORE.</span></div>
+        <button class="page-hotspot hotspot-next" type="button" data-turn="next" aria-label="Open portfolio book"><span>↗</span></button>
+      </section>
+      <section class="book-leaf content-leaf" data-page="1">
+        <div class="paper-head"><span>01 / THE PERSON</span><span>ABOUT</span></div>
+        <div class="paper-body"><div class="paper-eyebrow">HELLO, WORLD.</div><h2>Curious by nature.<br><em>Engineer by practice.</em></h2><p>I'm Prajjwal Gupta, a B.Tech student at Maharaja Agrasen Institute of Technology (MAIT), GGSIPU, focused on building practical software across systems programming, applied AI, and web development.</p><p>I enjoy understanding what happens beneath the interface: storage engines, model inference, concurrency, reliability, and the small engineering decisions that make software useful.</p><div class="fact-grid"><div><b>2023—2027</b><span>B.Tech · MAIT, GGSIPU</span></div><div><b>ECE / VLSI</b><span>Electronics & Communication</span></div><div><b>7.79 / 10</b><span>CGPA through Semester 6</span></div><div><b>INDIA</b><span>Based in New Delhi</span></div></div></div>
+        <div class="paper-foot"><span>PRAJJWAL GUPTA</span><span>02</span></div><button class="page-hotspot hotspot-prev" type="button" data-turn="prev" aria-label="Previous page"><span>↖</span></button><button class="page-hotspot hotspot-next" type="button" data-turn="next" aria-label="Next page"><span>↗</span></button>
+      </section>
+      <section class="book-leaf content-leaf" data-page="2">
+        <div class="paper-head"><span>02 / FIELD EXPERIENCE</span><span>EXPERIENCE</span></div>
+        <div class="paper-body"><div class="paper-eyebrow">RESEARCH MEETS IMPLEMENTATION</div><h2>Learn it.<br><em>Build it. Measure it.</em></h2>
+          <div class="experience-entry"><div class="entry-date">JUN — AUG 2026</div><h3>Technical / Research Intern</h3><div class="entry-org">DRDO · Solid State Physics Laboratory (SSPL)</div><p>Built a SEM defect-classification workflow for eight semiconductor defect types. Reached 98.02% best validation accuracy (macro F1 0.979), used acquisition-burst-aware splitting, and reduced inference latency from 2.88 ms to 0.63 ms with ONNX Runtime while maintaining 100% prediction agreement with PyTorch.</p><div class="mini-tags">PYTORCH · ONNX RUNTIME · STREAMLIT · PYTEST</div></div>
+          <div class="experience-entry"><div class="entry-date">JUN — JUL 2025</div><h3>Python Programming Intern</h3><div class="entry-org">Cantilever.in · Remote</div><p>Built a Tkinter expense tracker with SQLite3, input validation, category totals and Matplotlib charts; also created a persistent command-line contact book with add, search, delete and list operations.</p><div class="mini-tags">PYTHON · TKINTER · SQLITE3 · MATPLOTLIB</div></div>
+        </div><div class="paper-foot"><span>EXPERIENCE / SELECTED WORK</span><span>03</span></div><button class="page-hotspot hotspot-prev" type="button" data-turn="prev" aria-label="Previous page"><span>↖</span></button><button class="page-hotspot hotspot-next" type="button" data-turn="next" aria-label="Next page"><span>↗</span></button>
+      </section>
+      <section class="book-leaf content-leaf" data-page="3">
+        <div class="paper-head"><span>03 / SYSTEMS</span><span>PROJECT 01</span></div>
+        <div class="paper-body"><div class="project-index">01</div><div class="paper-eyebrow">C++20 · STORAGE ENGINEERING</div><h2>LSM-Tree<br><em>Key-Value Store</em></h2><p>Built a persistent key-value store from scratch with skip-list memtables, a write-ahead log, sorted string tables with a sparse index, Bloom filters, and size-tiered background compaction.</p><p>Added CRC32 checksums and WAL replay to detect corruption and repair torn tails. Validated the engine with 44 unit tests and a 300K-operation mixed benchmark using four reader and two writer threads, with zero errors.</p><div class="metric-strip"><div><b>300K</b><span>OPERATIONS</span></div><div><b>44</b><span>UNIT TESTS</span></div><div><b>0</b><span>BENCH ERRORS</span></div></div><div class="mini-tags">C++20 · CMAKE · MULTITHREADING · WAL · SSTABLES</div><a class="paper-link" href="https://github.com/Praj044/LSM-Storage-Engine" target="_blank" rel="noopener noreferrer">EXPLORE SOURCE CODE ↗</a></div>
+        <div class="paper-foot"><span>BUILD · TEST · MEASURE</span><span>04</span></div><button class="page-hotspot hotspot-prev" type="button" data-turn="prev" aria-label="Previous page"><span>↖</span></button><button class="page-hotspot hotspot-next" type="button" data-turn="next" aria-label="Next page"><span>↗</span></button>
+      </section>
+      <section class="book-leaf content-leaf" data-page="4">
+        <div class="paper-head"><span>04 / APPLIED AI</span><span>PROJECTS 02—03</span></div>
+        <div class="paper-body"><div class="project-mini"><div class="project-mini-number">02 / SECURITY</div><h2>AI <em>CyberShield</em></h2><p>Five concurrent analysis modules combine phishing ML, rule-based NLP, Gemini reasoning, URLhaus/VirusTotal intelligence, and zxcvbn password analysis into one 0–100 risk score. Deployed on Azure App Service with GitHub Actions CI/CD.</p><div class="mini-tags">PYTHON · SCIKIT-LEARN · STREAMLIT · AZURE</div><a class="paper-link" href="https://github.com/Praj044/AI-Cybershield" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a></div>
+          <div class="project-mini"><div class="project-mini-number">03 / WEB EXPERIENCE</div><h2>Wall <em>Calendar</em></h2><p>A responsive interactive calendar with day-range selection, seasonal theming, holiday markers, animated month transitions, and month/range-specific notes saved to localStorage with a 400 ms debounced auto-save.</p><div class="mini-tags">NEXT.JS · REACT · TYPESCRIPT · FRAMER MOTION</div><a class="paper-link" href="https://github.com/Praj044/Calendar" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a></div>
+        </div><div class="paper-foot"><span>USEFUL SOFTWARE, BUILT WITH INTENT</span><span>05</span></div><button class="page-hotspot hotspot-prev" type="button" data-turn="prev" aria-label="Previous page"><span>↖</span></button><button class="page-hotspot hotspot-next" type="button" data-turn="next" aria-label="Next page"><span>↗</span></button>
+      </section>
+      <section class="book-leaf content-leaf" data-page="5">
+        <div class="paper-head"><span>05 / EDGE AI</span><span>PROJECT 04</span></div>
+        <div class="paper-body"><div class="project-index">04</div><div class="paper-eyebrow">COMPUTER VISION · INFERENCE OPTIMIZATION</div><h2>SEM Defect<br><em>Classification</em></h2><p>A PyTorch CNN classifies eight semiconductor defect types. The workflow uses acquisition-burst grouping before dataset splitting to reduce near-duplicate leakage and exports the model to ONNX Runtime for faster inference.</p><div class="metric-large">98.02<small>%</small><span>BEST VALIDATION ACCURACY</span></div><div class="metric-strip"><div><b>4.5×</b><span>FASTER INFERENCE</span></div><div><b>0.63 ms</b><span>PER IMAGE</span></div><div><b>100%</b><span>PREDICTION AGREEMENT</span></div></div><div class="mini-tags">PYTORCH · ONNX RUNTIME · STREAMLIT · PYTEST</div><a class="paper-link" href="https://infersem.streamlit.app/" target="_blank" rel="noopener noreferrer">OPEN LIVE APPLICATION ↗</a><a class="paper-link secondary-link" href="https://github.com/Praj044/Sem_Defect" target="_blank" rel="noopener noreferrer">VIEW SOURCE CODE ↗</a></div>
+        <div class="paper-foot"><span>RESEARCH · OPTIMIZE · DEPLOY</span><span>06</span></div><button class="page-hotspot hotspot-prev" type="button" data-turn="prev" aria-label="Previous page"><span>↖</span></button><button class="page-hotspot hotspot-next" type="button" data-turn="next" aria-label="Next page"><span>↗</span></button>
+      </section>
+      <section class="book-leaf content-leaf" data-page="6">
+        <div class="paper-head"><span>06 / TOOLKIT</span><span>SKILLS</span></div>
+        <div class="paper-body"><div class="paper-eyebrow">TOOLS I REACH FOR</div><h2>A practical<br><em>engineering toolkit.</em></h2><div class="skill-list"><div><b>LANGUAGES</b><p>C++ · Python · SQL (MySQL, SQLite3)</p></div><div><b>CORE CS</b><p>Data Structures & Algorithms · OOP · DBMS · Operating Systems · Computer Networks · Multithreading</p></div><div><b>AI / ML</b><p>PyTorch · ONNX Runtime · Scikit-learn · TF-IDF · Logistic Regression · NLP · Gemini API</p></div><div><b>PLATFORMS & TOOLS</b><p>Git/GitHub · GitHub Actions · CI/CD · Azure App Service · CMake · Streamlit · PyTest</p></div><div><b>WEB</b><p>TypeScript · React · Next.js · Framer Motion · CSS Modules</p></div></div><div class="education-note"><b>EDUCATION</b><p>B.Tech, ECE (VLSI Design & Technology) · MAIT, GGSIPU · Aug 2023—Jun 2027</p><p>CGPA 7.79/10 through Semester 6 · Class XII 71.6% · Class X 82.4%</p></div></div>
+        <div class="paper-foot"><span>ALWAYS LEARNING</span><span>07</span></div><button class="page-hotspot hotspot-prev" type="button" data-turn="prev" aria-label="Previous page"><span>↖</span></button><button class="page-hotspot hotspot-next" type="button" data-turn="next" aria-label="Next page"><span>↗</span></button>
+      </section>
+      <section class="book-leaf contact-leaf" data-page="7">
+        <div class="contact-orbit"></div><div class="paper-head"><span>07 / THE NEXT CHAPTER</span><span>CONTACT</span></div>
+        <div class="paper-body contact-paper"><div class="paper-eyebrow">LET'S BUILD SOMETHING USEFUL.</div><h2>The next page<br><em>is unwritten.</em></h2><p>Thanks for exploring my work. If you're hiring for software engineering roles, building something interesting, or would like to discuss one of these projects, I'd love to connect.</p><a class="paper-link" href="mailto:p84610501@gmail.com">P84610501@GMAIL.COM ↗</a><a class="paper-link" href="https://github.com/Praj044" target="_blank" rel="noopener noreferrer">GITHUB / PRAJ044 ↗</a><a class="paper-link" href="https://www.linkedin.com/in/prajjwal-gupta-20792b291" target="_blank" rel="noopener noreferrer">LINKEDIN PROFILE ↗</a><div class="end-mark">PG<span>.</span></div></div>
+        <div class="paper-foot"><span>THANK YOU FOR READING</span><span>08</span></div><button class="page-hotspot hotspot-prev" type="button" data-turn="prev" aria-label="Previous page"><span>↖</span></button>
+      </section>
     </article>
   </div>
-</section>
-
-<section id="projects" class="wrap">
-  <div class="section-head"><div><div class="eyebrow">03 / Selected work</div><h2>Projects from the ground up.</h2></div><p>Systems programming, AI security, and thoughtful web experiences—built with an emphasis on reliability and measurable results.</p></div>
-  <div class="project-grid">
-    <article class="project">
-      <div class="project-top"><span class="project-num">PROJECT / 01</span><span class="project-type">SYSTEMS · C++20</span></div>
-      <h3>LSM-Tree Key-Value Store</h3>
-      <p>Built a persistent key-value store from scratch (~4.4K lines) with skip-list memtables, WAL, SSTables with a sparse index, Bloom filters, and size-tiered background compaction. Added CRC32 checksums and WAL replay to detect corruption and repair torn tails; validated with 44 unit tests and a 300K-operation mixed benchmark using four reader and two writer threads, with zero errors.</p>
-      <div class="tags"><span class="tag">C++20</span><span class="tag">CMake</span><span class="tag">Multithreading</span><span class="tag">WAL</span><span class="tag">SSTables</span><span class="tag">Bloom Filters</span></div>
-      <div class="project-foot"><a href="https://github.com/Praj044/LSM-Storage-Engine" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
-    </article>
-    <article class="project">
-      <div class="project-top"><span class="project-num">PROJECT / 02</span><span class="project-type">AI · CYBERSECURITY</span></div>
-      <h3>AI CyberShield</h3>
-      <p>Built a threat-analysis app combining five modules into a unified 0–100 risk score: TF-IDF + Logistic Regression phishing classification, rule-based NLP, Gemini reasoning, URLhaus/VirusTotal lookups, and zxcvbn password analysis. Ran modules concurrently and deployed to Azure App Service with GitHub Actions CI/CD on pushes to main.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Scikit-learn</span><span class="tag">Gemini API</span><span class="tag">Azure</span><span class="tag">GitHub Actions</span></div>
-      <div class="project-foot"><a href="https://github.com/Praj044/AI-Cybershield" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
-    </article>
-    <article class="project">
-      <div class="project-top"><span class="project-num">PROJECT / 03</span><span class="project-type">WEB · NEXT.JS</span></div>
-      <h3>Wall Calendar</h3>
-      <p>Built a responsive interactive calendar with day-range selection, seasonal theming, holiday markers, and animated month transitions. Managed calendar state in a custom useCalendar hook and saved month- and range-specific notes to localStorage with a 400 ms debounced auto-save.</p>
-      <div class="tags"><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Framer Motion</span><span class="tag">CSS Modules</span></div>
-      <div class="project-foot"><a href="https://github.com/Praj044/Calendar" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
-    </article>
-    <article class="project">
-      <div class="project-top"><span class="project-num">PROJECT / 04</span><span class="project-type">EDGE AI · COMPUTER VISION</span></div>
-      <h3>SEM Defect Classification</h3>
-      <p>Classified eight semiconductor defect types using a custom PyTorch CNN. Reached 98.02% best validation accuracy on 101 validation images (223 training images), used acquisition-burst grouping before splitting, and cut inference latency 4.5× through ONNX Runtime with 100% prediction agreement against PyTorch. The live app supports batch uploads, confidence scores, latency reporting, and CSV export.</p>
-      <div class="tags"><span class="tag">PyTorch</span><span class="tag">ONNX Runtime</span><span class="tag">Streamlit</span><span class="tag">PyTest</span></div>
-      <div class="project-foot"><a href="https://infersem.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/Praj044/Sem_Defect" target="_blank" rel="noopener noreferrer">Source code ↗</a></div>
-    </article>
-  </div>
-</section>
-
-<section id="skills" class="wrap">
-  <div class="section-head"><div><div class="eyebrow">04 / Toolkit</div><h2>Tools I work with.</h2></div><p>A project-led snapshot of technologies used across the work above. This list can be refined for each target role.</p></div>
-  <div class="skills">
-    <div class="skill-card"><h3>Programming</h3><p>C++ · Python · SQL (MySQL, SQLite3)</p></div>
-    <div class="skill-card"><h3>Systems & Backend</h3><p>Data Structures & Algorithms · OOP · DBMS · Operating Systems · Computer Networks · REST API integration · Multithreading</p></div>
-    <div class="skill-card"><h3>AI / ML</h3><p>Scikit-learn · TF-IDF · Logistic Regression · PyTorch · ONNX · ONNX Runtime</p></div>
-    <div class="skill-card"><h3>Security</h3><p>Phishing detection · URL analysis · Threat intelligence · Password-strength analysis</p></div>
-    <div class="skill-card"><h3>Tools & Deployment</h3><p>PyTest · Git/GitHub · GitHub Actions · CI/CD · Azure App Service · CMake · Streamlit</p></div>
-    <div class="skill-card"><h3>Frontend & Data</h3><p>TypeScript · React · Next.js · Framer Motion · CSS Modules</p></div>
-  </div>
-</section>
-
-<section id="contact" class="wrap">
-  <div class="contact">
-    <div class="contact-row"><div><div class="eyebrow">05 / Contact</div><h2>Have a problem<br>worth building for?</h2><p>I’m interested in software engineering opportunities where I can contribute, learn from strong teams, and build reliable products. Reach me directly by email, or explore my code and professional profile through the links below.</p></div>
-    <div class="actions"><a class="btn primary" href="mailto:p84610501@gmail.com">Email me ↗</a>
-    <a class="btn" href="https://github.com/Praj044" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-    <a class="btn" href="https://www.linkedin.com/in/prajjwal-gupta-20792b291" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
-  </div>
-</section>
+  <div class="book-bottom"><span id="bookHint">Tip: click the right page corner to turn forward.</span><button id="restartBook" type="button">↺ RESTART BOOK</button></div>
+  <div class="contents-panel" id="contentsPanel" hidden><div class="contents-card"><div class="contents-head"><span>CONTENTS / INDEX</span><button id="closeContents" type="button" aria-label="Close contents">×</button></div><button data-goto="0">00 <span>Cover</span> <b>↗</b></button><button data-goto="1">01 <span>About me</span> <b>↗</b></button><button data-goto="2">02 <span>Experience</span> <b>↗</b></button><button data-goto="3">03 <span>LSM-Tree Storage Engine</span> <b>↗</b></button><button data-goto="4">04 <span>AI CyberShield + Wall Calendar</span> <b>↗</b></button><button data-goto="5">05 <span>SEM Defect Classification</span> <b>↗</b></button><button data-goto="6">06 <span>Skills + Education</span> <b>↗</b></button><button data-goto="7">07 <span>Contact</span> <b>↗</b></button></div></div>
 </main>
-<footer class="wrap footer"><span>© 2026 PRAJJWAL GUPTA</span><span><a href="https://github.com/Praj044" target="_blank" rel="noopener noreferrer">GITHUB ↗</a> · <a href="https://www.linkedin.com/in/prajjwal-gupta-20792b291" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a> · GROUNDED ON EARTH 🌍</span></footer>
+<footer class="book-footer"><span>EARTHBOUND · PRAJJWAL GUPTA</span><span>DESIGNED TO BE EXPLORED</span></footer>
+
+/* Interactive portfolio book */
+body{background:#07101d;background-image:radial-gradient(ellipse at 50% 20%,rgba(25,115,180,.16),transparent 44%),radial-gradient(ellipse at 10% 75%,rgba(30,60,130,.1),transparent 32%);overflow-x:hidden}
+.nav{position:relative}
+.nav-links a{cursor:pointer}
+.book-experience{width:min(1200px,calc(100% - 36px));margin:0 auto;padding:48px 0 22px;min-height:calc(100vh - 72px)}
+.book-intro{text-align:center;margin:0 auto 24px;max-width:720px}
+.book-intro .eyebrow{font-size:.68rem}
+.book-intro h1{font-size:clamp(2rem,4.4vw,3.7rem);letter-spacing:-.065em;line-height:1.05;margin:12px 0}
+.book-intro h1 em,.book-leaf em{font-style:normal;color:#63dcff}
+.book-intro p{color:#9db3c5;margin:0;font-size:.92rem}
+.book-toolbar{width:min(100%,1020px);margin:0 auto 12px;display:flex;justify-content:space-between;align-items:center;color:#6ea4c4;font: .68rem "DM Mono",monospace;letter-spacing:.1em}
+.book-tools{display:flex;gap:7px}
+.book-tool{border:1px solid rgba(120,205,245,.23);background:rgba(9,28,48,.85);color:#dff6ff;border-radius:7px;padding:8px 12px;cursor:pointer;transition:background .2s,transform .2s}
+.book-tool:hover{background:#123b5b;transform:translateY(-1px)}
+.book-scene{position:relative;width:min(100%,1020px);height:clamp(520px,62vw,650px);margin:auto;perspective:2200px;isolation:isolate}
+.book-shadow{position:absolute;left:5%;right:5%;bottom:-15px;height:35px;background:rgba(0,0,0,.5);filter:blur(22px);border-radius:50%}
+.portfolio-book{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.72,.15,1);border-radius:8px 14px 14px 8px}
+.portfolio-book.is-turning{transform:rotateY(-5deg) translateY(-2px)}
+.book-spine{position:absolute;top:0;bottom:0;left:50%;width:24px;transform:translateX(-50%);z-index:5;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(130,218,255,.09) 48%,rgba(0,0,0,.24));}
+.book-leaf{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;backface-visibility:hidden;box-shadow:inset 0 0 0 1px rgba(140,205,230,.12);transition:transform .86s cubic-bezier(.22,.7,.12,1),filter .65s;transform-style:preserve-3d}
+.cover-leaf{left:0;width:100%;border-radius:8px 14px 14px 8px;background:radial-gradient(ellipse at 75% 30%,rgba(0,166,255,.18),transparent 42%),linear-gradient(135deg,#0a2440 0%,#071523 50%,#06101b 100%);box-shadow:inset 0 0 0 1px rgba(110,215,255,.3),inset 0 0 45px rgba(0,0,0,.35),0 25px 55px rgba(0,0,0,.28);z-index:20;transform-origin:left center}
+.cover-leaf.cover-open{transform:rotateY(-150deg);pointer-events:none}
+.cover-orbit{position:absolute;border:1px solid rgba(85,207,255,.22);border-radius:50%;pointer-events:none}
+.orbit-a{width:490px;height:190px;right:-60px;top:80px;transform:rotate(-28deg)}
+.orbit-b{width:430px;height:290px;right:-30px;top:30px;transform:rotate(45deg);border-style:dashed;opacity:.65}
+.cover-globe{position:absolute;width:310px;height:310px;right:7%;top:15%;border-radius:50%;background:radial-gradient(circle at 33% 27%,#2779a3 0%,#12456d 32%,#071d34 68%,#030a15 100%);box-shadow:inset -25px -15px 45px #020813,0 0 75px rgba(0,157,255,.18);overflow:hidden;opacity:.83}
+.cover-grid{position:absolute;inset:-20%;background:repeating-linear-gradient(0deg,transparent 0 24px,rgba(111,225,255,.22) 25px 26px),repeating-linear-gradient(90deg,transparent 0 24px,rgba(111,225,255,.2) 25px 26px);border-radius:50%;transform:rotate(-20deg);mask-image:radial-gradient(circle,#000 10%,transparent 69%)}
+.cover-node{position:absolute;width:7px;height:7px;border-radius:50%;background:#b8ffed;box-shadow:0 0 16px #54d9ff}
+.node-a{top:34%;left:28%}.node-b{top:57%;left:62%}.node-c{top:27%;left:71%}
+.cover-top,.cover-bottom{position:absolute;left:36px;right:36px;display:flex;justify-content:space-between;gap:20px;color:#6ca4c5;font: .63rem "DM Mono",monospace;letter-spacing:.12em}
+.cover-top{top:30px}.cover-bottom{bottom:25px}
+.cover-content{position:absolute;left:9%;top:20%;width:58%;z-index:2}
+.cover-kicker{font: .68rem "DM Mono",monospace;color:#9ddff5;letter-spacing:.1em;display:flex;align-items:center;gap:9px}
+.cover-content h2{font-size:clamp(3.5rem,8vw,6.8rem);letter-spacing:-.085em;line-height:.87;margin:28px 0 20px}
+.cover-content h2 em{font-style:normal;color:#67e0ff}
+.cover-content p{color:#aac6d9;max-width:360px;font-size:1rem}
+.cover-cta{display:inline-flex;gap:25px;align-items:center;margin-top:28px;padding:12px 0;border-bottom:1px solid #54d9ff;color:#baf1ff;font: .7rem "DM Mono",monospace;letter-spacing:.15em}
+.cover-cta span{font-size:1.1rem}
+.content-leaf{left:0;width:50%;background:linear-gradient(105deg,#f4f3ed,#e9edf0);color:#132b3b;padding:27px 27px 22px;opacity:0;pointer-events:none;transform:rotateY(-180deg);transform-origin:left center;z-index:1}
+.content-leaf.is-visible{opacity:1;pointer-events:auto;transform:rotateY(0deg);z-index:10}
+.content-leaf.is-turning-out{transform:rotateY(-180deg);z-index:12}
+.content-leaf.is-active-right{left:50%;transform-origin:left center;transform:rotateY(0);opacity:1;pointer-events:auto}
+.content-leaf.is-active-left{left:0;transform-origin:right center;transform:rotateY(0);opacity:1;pointer-events:auto}
+.paper-head{display:flex;justify-content:space-between;gap:8px;font: .57rem "DM Mono",monospace;letter-spacing:.09em;color:#527487;border-bottom:1px solid rgba(18,65,88,.18);padding-bottom:10px}
+.paper-body{padding:24px 0 18px;height:calc(100% - 48px);overflow:auto;scrollbar-width:thin;scrollbar-color:#aac7d5 transparent}
+.paper-eyebrow{font: .62rem "DM Mono",monospace;letter-spacing:.1em;color:#15799b;margin-bottom:12px}
+.paper-body h2{font-size:clamp(1.5rem,2.6vw,2.45rem);letter-spacing:-.065em;line-height:1.04;margin:0 0 18px}
+.paper-body h2 em{color:#0789b6}
+.paper-body p{font-size:.78rem;line-height:1.75;color:#425b6b;margin:0 0 13px}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:23px}
+.fact-grid div{padding:12px 10px;border-top:1px solid rgba(16,79,107,.2);display:flex;flex-direction:column;gap:3px}
+.fact-grid b{font: .77rem "DM Mono",monospace;color:#0c6889}.fact-grid span{font-size:.66rem;color:#526c7b}
+.paper-foot{position:absolute;bottom:15px;left:27px;right:27px;display:flex;justify-content:space-between;font: .55rem "DM Mono",monospace;letter-spacing:.08em;color:#648091;border-top:1px solid rgba(18,65,88,.18);padding-top:9px}
+.page-hotspot{position:absolute;z-index:30;bottom:0;width:48px;height:48px;border:0;background:linear-gradient(135deg,transparent 49%,rgba(23,114,151,.15) 50%);color:#087ca5;cursor:pointer;font-size:1.1rem;transition:background .2s,transform .2s}
+.page-hotspot:hover{background:rgba(84,217,255,.18);transform:scale(1.04)}
+.hotspot-next{right:0;border-radius:12px 0 0 0}.hotspot-prev{left:0;border-radius:0 12px 0 0}
+.experience-entry{border-left:2px solid #66cce8;padding:0 0 0 13px;margin:18px 0}
+.entry-date,.project-index,.project-mini-number{font: .6rem "DM Mono",monospace;letter-spacing:.08em;color:#1485a6}
+.experience-entry h3{font-size:1rem;margin:5px 0 0;letter-spacing:-.03em}
+.entry-org{font-size:.68rem;color:#1680a0;font-weight:700;margin:2px 0 8px}
+.experience-entry p{font-size:.7rem;line-height:1.65;margin-bottom:9px}
+.mini-tags{font: .54rem "DM Mono",monospace;line-height:1.8;letter-spacing:.04em;color:#1b819e;margin:10px 0}
+.project-index{font-size:3rem;line-height:1;margin:4px 0 12px;color:rgba(0,134,179,.22)}
+.metric-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:17px 0}
+.metric-strip div{padding:11px 7px;background:rgba(12,111,146,.07);border:1px solid rgba(12,111,146,.12);display:flex;flex-direction:column;gap:3px}
+.metric-strip b{font-size:1.05rem;color:#087da3;letter-spacing:-.04em}
+.metric-strip span{font: .49rem "DM Mono",monospace;color:#567587}
+.paper-link{display:block;width:max-content;max-width:100%;font: .6rem "DM Mono",monospace;letter-spacing:.06em;color:#057ea6;margin-top:16px;border-bottom:1px solid rgba(5,126,166,.3);padding-bottom:3px}
+.paper-link:hover{color:#023d55;border-color:#023d55}.secondary-link{margin-top:10px}
+.project-mini{padding:0 0 14px;margin-bottom:17px;border-bottom:1px solid rgba(18,65,88,.18)}
+.project-mini:last-child{border-bottom:0}
+.project-mini h2{font-size:1.55rem;margin:6px 0 10px}
+.metric-large{font-size:3.5rem;line-height:1;font-weight:800;letter-spacing:-.08em;color:#087ea6;margin:18px 0 2px}
+.metric-large small{font-size:1.4rem}.metric-large span{display:block;font: .55rem "DM Mono",monospace;letter-spacing:.08em;color:#5a7d8f;margin-top:5px}
+.skill-list>div{padding:9px 0;border-bottom:1px solid rgba(18,65,88,.13)}
+.skill-list b,.education-note b{font: .57rem "DM Mono",monospace;letter-spacing:.07em;color:#1482a3}
+.skill-list p,.education-note p{margin:4px 0 0;font-size:.69rem;line-height:1.6}
+.education-note{margin-top:13px;padding:13px;background:rgba(13,112,148,.07)}
+.contact-leaf{background:radial-gradient(circle at 80% 20%,rgba(84,217,255,.12),transparent 42%),linear-gradient(130deg,#0d2941,#071522);color:#e8f8ff}
+.contact-leaf .paper-head,.contact-leaf .paper-foot{color:#8cb9cf;border-color:rgba(155,219,243,.2)}
+.contact-paper{padding-top:75px}
+.contact-leaf .paper-body p{color:#b3cbd9}
+.contact-leaf .paper-body h2{font-size:clamp(2rem,3.2vw,3.1rem)}
+.contact-leaf .paper-body h2 em{color:#62ddff}
+.contact-leaf .paper-link{color:#91ebff;border-color:rgba(145,235,255,.3)}
+.contact-orbit{position:absolute;width:300px;height:160px;border:1px solid rgba(84,217,255,.15);border-radius:50%;right:-150px;top:80px;transform:rotate(-30deg)}
+.end-mark{font-size:3.5rem;font-weight:800;letter-spacing:-.1em;color:#ecfbff;margin-top:38px}.end-mark span{color:#54d9ff}
+.book-bottom{width:min(100%,1020px);display:flex;justify-content:space-between;gap:14px;margin:14px auto 0;color:#6794ad;font: .61rem "DM Mono",monospace;letter-spacing:.05em}
+.book-bottom button{border:0;background:none;color:#8dcce5;cursor:pointer;font:inherit}
+.book-footer{width:min(1200px,calc(100% - 36px));margin:10px auto 25px;border-top:1px solid rgba(84,217,255,.12);padding-top:17px;display:flex;justify-content:space-between;gap:14px;color:#537e98;font: .58rem "DM Mono",monospace;letter-spacing:.1em}
+.contents-panel{position:fixed;inset:0;z-index:80;background:rgba(2,8,16,.78);backdrop-filter:blur(12px);display:grid;place-items:center;padding:20px}
+.contents-panel[hidden]{display:none}
+.contents-card{width:min(480px,100%);background:#0a1b2d;border:1px solid rgba(84,217,255,.25);border-radius:14px;padding:20px;box-shadow:0 30px 100px #0008}
+.contents-head{display:flex;justify-content:space-between;align-items:center;font: .7rem "DM Mono",monospace;color:#6dcde9;letter-spacing:.1em;padding-bottom:14px}
+.contents-head button{background:none;border:0;color:#d8f7ff;font-size:1.5rem;cursor:pointer}
+.contents-card>button{display:flex;width:100%;align-items:center;gap:14px;text-align:left;padding:12px 5px;background:none;border:0;border-top:1px solid rgba(84,217,255,.1);color:#69c8e6;cursor:pointer;font: .67rem "DM Mono",monospace}
+.contents-card>button span{flex:1;color:#e1f5fc;font: .84rem Manrope,sans-serif}.contents-card>button b{font-size:1rem}
+@media(max-width:760px){
+ .book-experience{padding:27px 0 18px;width:calc(100% - 20px)}
+ .book-intro{margin-bottom:19px}.book-intro h1{font-size:2.3rem}
+ .book-scene{height:auto;min-height:660px;perspective:1800px}
+ .portfolio-book{height:auto;min-height:660px}
+ .book-spine{display:none}
+ .cover-leaf{width:100%;min-height:660px}
+ .cover-content{left:8%;top:22%;width:80%}.cover-content h2{font-size:clamp(3.5rem,17vw,5.8rem)}
+ .cover-globe{width:230px;height:230px;right:-25px;top:12%;opacity:.5}
+ .cover-orbit.orbit-a{right:-180px}.cover-orbit.orbit-b{right:-160px}
+ .cover-top,.cover-bottom{left:18px;right:18px;font-size:.52rem}
+ .content-leaf{width:100%;left:0;min-height:660px;padding:23px 22px 22px;transform:translateX(25px) rotateY(-8deg)}
+ .content-leaf.is-visible{transform:translateX(0) rotateY(0);z-index:10}
+ .content-leaf.is-turning-out{transform:translateX(-24px) rotateY(8deg);z-index:12}
+ .content-leaf.is-active-right,.content-leaf.is-active-left{left:0;width:100%;transform:translateX(0) rotateY(0)}
+ .paper-body{height:calc(100% - 48px);max-height:565px}
+ .paper-body h2{font-size:2rem}.experience-entry p,.paper-body p{font-size:.78rem}
+ .book-toolbar{font-size:.58rem}.book-tool{padding:7px 10px}
+ .book-bottom{font-size:.55rem}.book-footer{font-size:.52rem}
+}
+@media(max-width:420px){.book-scene,.portfolio-book,.cover-leaf,.content-leaf{min-height:700px}.paper-body{max-height:600px}.book-toolbar{align-items:flex-start}.cover-content h2{font-size:3.5rem}.fact-grid{gap:6px}.fact-grid div{padding:10px 7px}}
+@media(prefers-reduced-motion:reduce){.book-leaf,.portfolio-book,.book-tool,.page-hotspot{transition:none!important}.book-intro *{animation:none!important}}
+
+
 <script>
 (() => {
-  const canvas = document.getElementById('globe');
-  const ctx = canvas.getContext('2d');
-  let w=0,h=0,dpr=1,rotY=-0.45,rotX=0.18,dragging=false,lastX=0,lastY=0,auto=true,scrollProgress=0,scrollVelocity=0;
-  const stars=Array.from({length:180},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.2+.2,a:Math.random()*.45+.08}));
-  const dots=[];
-  for(let i=0;i<1500;i++){
-    const lat=Math.acos(2*Math.random()-1)-Math.PI/2, lon=Math.random()*Math.PI*2;
-    dots.push({lat,lon});
-  }
-  // Stylized, deterministic land masses: organic continent-like blobs on a sphere.
-  const land=[
-    {lat:.63,lon:-1.85,rx:.43,ry:.60},{lat:.05,lon:-1.55,rx:.24,ry:.62},
-    {lat:.72,lon:.15,rx:.31,ry:.30},{lat:.25,lon:.45,rx:.34,ry:.70},
-    {lat:-.48,lon:.62,rx:.24,ry:.48},{lat:.15,lon:1.75,rx:.43,ry:.40},
-    {lat:-.15,lon:2.15,rx:.33,ry:.38},{lat:1.1,lon:-.4,rx:.25,ry:.15}
-  ];
-  function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);w=r.width;h=r.height;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
-  function project(lat,lon,R,cx,cy){
-    const activeRotY=rotY+scrollProgress*Math.PI*2.8;
-    let x=Math.cos(lat)*Math.sin(lon), y=Math.sin(lat), z=Math.cos(lat)*Math.cos(lon);
-    let x1=x*Math.cos(activeRotY)+z*Math.sin(activeRotY), z1=-x*Math.sin(activeRotY)+z*Math.cos(activeRotY);
-    let y1=y*Math.cos(rotX)-z1*Math.sin(rotX), z2=y*Math.sin(rotX)+z1*Math.cos(rotX);
-    return {x:cx+x1*R,y:cy-y1*R,z:z2,vis:z2>-.02};
-  }
-  function wrapLon(a){while(a>Math.PI)a-=2*Math.PI;while(a< -Math.PI)a+=2*Math.PI;return a}
-  function isLand(lat,lon){
-    for(const c of land){let dx=wrapLon(lon-c.lon)*Math.cos(c.lat),dy=lat-c.lat;let noise=Math.sin(lon*17+lat*9)*.045+Math.sin(lon*31-lat*15)*.022;if((dx*dx)/(c.rx*c.rx)+(dy*dy)/(c.ry*c.ry)<1+noise)return true}
-    return false;
-  }
-  function draw(){
-    ctx.clearRect(0,0,w,h);const cx=w/2,cy=h/2,R=Math.min(w,h)*.39;
-    const scrollTurn=scrollProgress*Math.PI*2.8;
-    const drawRotY=rotY+scrollTurn;
-    stars.forEach(s=>{ctx.globalAlpha=s.a;ctx.fillStyle='#b7eaff';ctx.beginPath();ctx.arc(s.x*w,s.y*h,s.r,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
-    // orbital rings
-    ctx.strokeStyle='rgba(130,219,157,.12)';ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(cx,cy,R*1.19,R*.36,-.25,0,Math.PI*2);ctx.stroke();
-    const grad=ctx.createRadialGradient(cx-R*.3,cy-R*.35,R*.08,cx,cy,R*1.1);grad.addColorStop(0,'#1a5273');grad.addColorStop(.55,'#0b2d45');grad.addColorStop(1,'#06131f');
-    ctx.fillStyle=grad;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.fill();
-    ctx.save();ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.clip();
-    // grid
-    ctx.strokeStyle='rgba(133,218,160,.16)';ctx.lineWidth=.7;
-    for(let lat=-1.2;lat<=1.2;lat+=.3){ctx.beginPath();for(let lon=0;lon<=Math.PI*2+.04;lon+=.04){const p=project(lat,lon,R,cx,cy);if(lon===0)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)}ctx.stroke()}
-    for(let lon=0;lon<Math.PI;lon+=Math.PI/8){ctx.beginPath();for(let lat=-Math.PI/2;lat<=Math.PI/2+.03;lat+=.03){const p=project(lat,lon,R,cx,cy);if(lat<-.01)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y)}ctx.stroke()}
-    const network=[];
-    for(let i=0;i<dots.length;i+=7){
-      const d=dots[i],p=project(d.lat,d.lon,R,cx,cy);
-      if(p.vis)network.push({x:p.x,y:p.y,z:p.z,land:isLand(d.lat,d.lon)});
-    }
-    ctx.lineWidth=.65;
-    for(let i=0;i<network.length;i++){
-      let links=0;
-      for(let j=i+1;j<network.length&&links<3;j++){
-        const a=network[i],b=network[j],dx=a.x-b.x,dy=a.y-b.y,dist=dx*dx+dy*dy;
-        if(dist<Math.pow(R*.19,2)){
-          ctx.strokeStyle='rgba(64,190,255,'+(0.2*(1-scrollProgress*.25)+.035)+')';
-          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();links++;
-        }
+  const book = document.getElementById('portfolioBook');
+  const leaves = [...book.querySelectorAll('.book-leaf')];
+  const counter = document.getElementById('bookCounter');
+  const hint = document.getElementById('bookHint');
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+  const contents = document.getElementById('contentsPanel');
+  let page = 0, busy = false, touchX = 0;
+  const total = leaves.length;
+  function render(animate=true) {
+    leaves.forEach((leaf,i) => {
+      leaf.classList.remove('is-visible','is-turning-out','is-active-left','is-active-right','cover-open');
+      leaf.style.zIndex = String(i===page ? 30 : (i<page ? 5+i : 1+i));
+      if(i===0) {
+        if(page>0) leaf.classList.add('cover-open');
+      } else if(i===page) {
+        leaf.classList.add('is-visible');
+        leaf.classList.add(page%2===0?'is-active-left':'is-active-right');
       }
-    }
-    dots.forEach(d=>{const p=project(d.lat,d.lon,R,cx,cy);if(!p.vis)return;const landDot=isLand(d.lat,d.lon);ctx.globalAlpha=landDot?.92:.34;ctx.fillStyle=landDot?'#b3f7ff':'#38baff';ctx.beginPath();ctx.arc(p.x,p.y,landDot?1.25:.7,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
-    // highlighted route / location markers
-    [{lat:.49,lon:-2.2,label:'AMERICAS'},{lat:.27,lon:.18,label:'EUROPE'},{lat:.28,lon:1.35,label:'ASIA'}].forEach((m,i)=>{const p=project(m.lat,m.lon,R,cx,cy);if(p.vis){ctx.strokeStyle=i===2?'#c5ff91':'#7ee7ff';ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(p.x,p.y,5,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#c5ff91';ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill()}});
-    ctx.restore();
-    ctx.strokeStyle='rgba(84,217,255,.62)';ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.stroke();
-    if(auto&&!dragging)rotY+=.00065;
-    scrollVelocity*=.92;
-    const stage=document.querySelector('.globe-stage');
-    if(stage){const halo=stage.querySelector('.globe-halo');if(halo){halo.style.transform='scale('+(1+scrollProgress*.12)+')';halo.style.opacity=String(1-scrollProgress*.18)}}
-    requestAnimationFrame(draw);
+    });
+    counter.textContent = page===0 ? 'COVER · 01 / 08' : 'PAGE '+String(page).padStart(2,'0')+' / 08';
+    prev.disabled = page===0;
+    next.disabled = page===total-1;
+    prev.style.opacity = page===0 ? '.35' : '1';
+    next.style.opacity = page===total-1 ? '.35' : '1';
+    hint.textContent = page===0 ? 'Tip: click OPEN THE BOOK or the page corner.' : page===total-1 ? 'You reached the end. Restart or revisit any chapter.' : 'Click the page corner, use arrows, or press ← →.';
+    book.classList.toggle('is-turning',animate);
   }
-  window.addEventListener('scroll',()=>{const maxScroll=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);scrollProgress=Math.max(0,Math.min(1,window.scrollY/maxScroll));},{passive:true});
-  canvas.addEventListener('pointerdown',e=>{dragging=true;auto=false;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture(e.pointerId)});
-  canvas.addEventListener('pointermove',e=>{if(!dragging)return;rotY+=(e.clientX-lastX)*.008;rotX=Math.max(-1.1,Math.min(1.1,rotX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY});
-  canvas.addEventListener('pointerup',()=>{dragging=false});canvas.addEventListener('pointercancel',()=>dragging=false);
-  window.addEventListener('resize',resize);resize();draw();
+  function go(to) {
+    if(busy) return;
+    const target = Math.max(0,Math.min(total-1,to));
+    if(target===page) return;
+    busy=true;
+    const old=page;
+    page=target;
+    const direction=target>old?'next':'prev';
+    book.classList.toggle('turn-next',direction==='next');
+    book.classList.toggle('turn-prev',direction==='prev');
+    render(true);
+    window.setTimeout(()=>{busy=false;book.classList.remove('is-turning','turn-next','turn-prev')},420);
+  }
+  document.querySelectorAll('[data-turn]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();go(page+(btn.dataset.turn==='next'?1:-1))}));
+  prev.addEventListener('click',()=>go(page-1));
+  next.addEventListener('click',()=>go(page+1));
+  document.getElementById('restartBook').addEventListener('click',()=>go(0));
+  document.getElementById('contentsBtn').addEventListener('click',()=>{contents.hidden=false});
+  document.getElementById('closeContents').addEventListener('click',()=>{contents.hidden=true});
+  contents.addEventListener('click',e=>{if(e.target===contents)contents.hidden=true});
+  contents.querySelectorAll('[data-goto]').forEach(btn=>btn.addEventListener('click',()=>{contents.hidden=true;go(Number(btn.dataset.goto))}));
+  document.addEventListener('keydown',e=>{
+    if(!contents.hidden && e.key==='Escape'){contents.hidden=true;return}
+    if(!contents.hidden)return;
+    if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();go(page+1)}
+    if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(page-1)}
+    if(e.key==='Home'){e.preventDefault();go(0)}
+    if(e.key==='End'){e.preventDefault();go(total-1)}
+  });
+  const scene=document.getElementById('bookScene');
+  scene.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});
+  scene.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>55)go(page+(dx<0?1:-1))},{passive:true});
+  document.querySelectorAll('.nav-links a').forEach((a,i)=>a.addEventListener('click',e=>{e.preventDefault();go([1,2,3,6][i]??1)}));
+  render(false);
 })();
 </script>
+
 </body>
 </html>
